@@ -40,3 +40,14 @@ body {
 .menu .menu-item:hover {
     background: #343434;
 }
+
+.random-message-block{
+    position: absolute;
+    display: inline-block;
+    padding: 5px 60px;
+    background-color: #f11f1f;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 60px;
+}
