@@ -2,7 +2,7 @@ import './styles.css'
 import {ContextMenu} from "@/menu";
 import {BackgroundModule} from "@/modules/background.module";
 
-const modules = [BackgroundModule]
+const modules = [BackgroundModule, clickCounterModule]
 
 const contextMenu = new ContextMenu('#menu', modules)
 
