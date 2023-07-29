@@ -13,6 +13,7 @@ export class CurrentLocation extends Module {
         mapDiv.style.height = '90%';
         mapDiv.style.width = '60%';
         mapDiv.style.margin = '0 auto'
+        mapDiv.style.marginTop = '60px'
         this.bodyEl.append(mapDiv)
         let map = null;
     //   document.getElementById('getLocation').addEventListener('click', function() {
