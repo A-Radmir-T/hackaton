@@ -9,6 +9,7 @@ export class ClickCounter extends Module {
   
     trigger() {
         const amountClics = document.createElement("p")
+        amountClics.id = "counter"
         let clickCount = 0
         amountClics.innerText = `Количество кликов: ${clickCount}`
         this.bodyEl.append(amountClics)
