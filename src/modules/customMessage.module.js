@@ -1,6 +1,6 @@
 import {Module} from '../core/module';
 import {random} from '../utils';
-import {messageArray} from '../constants';
+
 
 export class CustomMessage extends Module {
 
@@ -11,7 +11,10 @@ export class CustomMessage extends Module {
         this.bodyEl = document.querySelector('body');
     }
 
-    trigger(messageArray) {
+    trigger(){
+
+        const messageArray = ['Доступное такси для всех – наша миссия!', 'Мы делаем то, что работает на Вас!', 'Больше молока, меньше какао!', 'Мы решим Ваши проблемы', '"Бегемот".Починяем примусы. Недорого.'];
+
         const randomInd = random(0, messageArray.length - 1);
         const randomMess = messageArray[randomInd];
 
