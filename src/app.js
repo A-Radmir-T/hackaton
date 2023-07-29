@@ -4,9 +4,7 @@ import {BackgroundModule} from "@/modules/background.module";
 import { CustomMessage } from './modules/customMessage.module';
 import {ClickCounter} from "@/modules/clickCounter.module";
 import {CurrentLocation} from "@/modules/currentLocation.module";
-
 import {ShapeModule} from "@/modules/shape.module";
-import {CurrentLocation} from "@/modules/currentLocation.module";
 
 const modules = [BackgroundModule, ClickCounter, CustomMessage, ShapeModule, CurrentLocation]
 
