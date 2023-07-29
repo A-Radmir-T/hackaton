@@ -12,7 +12,7 @@ export class ClickCounter extends Module {
         let clickCount = 0
         amountClics.innerText = `Количество кликов: ${clickCount}`
         this.bodyEl.append(amountClics)
-        this.body.addEventListener("click", () => {
+        this.bodyEl.addEventListener("click", () => {
             clickCount++;
             amountClics.innerText = `Количество кликов: ${clickCount}`;
         })
