@@ -52,3 +52,16 @@ body {
     font-weight: bold;
     border-radius: 60px;
 }
+
+#counter {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    font-size: 20px;
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
