@@ -52,3 +52,7 @@ body {
     font-weight: bold;
     border-radius: 60px;
 }
+
+.random-shape{
+    position: absolute;
+}
