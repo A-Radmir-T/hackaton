@@ -16,6 +16,7 @@ export class CurrentLocation extends Module {
         mapDiv.style.marginTop = '60px'
         this.bodyEl.append(mapDiv)
         let map = null;
+
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             let pos = {
@@ -51,3 +52,4 @@ export class CurrentLocation extends Module {
     }, 10000);
         }
       }
+
