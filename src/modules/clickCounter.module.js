@@ -3,7 +3,7 @@ import {Module} from '../core/module'
 export class ClickCounter extends Module {
     static dataType = 'ClickCounterModule'
     constructor() {
-      super(ClickCounter.dataType, 'Посчитать скорость кликов')
+      super(ClickCounter.dataType, 'Посчитать клики')
       this.bodyEl = document.querySelector('body')
     }
   
