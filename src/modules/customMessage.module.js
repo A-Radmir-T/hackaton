@@ -4,10 +4,10 @@ import {random} from '../utils';
 
 export class CustomMessage extends Module {
 
-    static dataType = 'CustomMessage'
+    static dataType = 'customMessageModule'
 
-    constructor(type){
-        super(type, 'CustomMessage')
+    constructor(){
+        super(CustomMessage.dataType, 'Поменять цвет');
         this.bodyEl = document.querySelector('body');
     }
 
