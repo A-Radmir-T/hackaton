@@ -1,31 +1,24 @@
 import {Module} from '../core/module'
 
 export class ClickCounter extends Module {
-    static dataType = 'clickCounterModule'
+    static dataType = 'ClickCounterModule'
     constructor() {
-      super(clickCounterModule.dataType, 'Посчитать скорость кликов')
+      super(ClickCounterModule.dataType, 'Посчитать скорость кликов')
       this.bodyEl = document.querySelector('body')
-      this.clickCount = 0
-      this.isCounting = true;
-      this.amountClics = document.createElement("p")
     }
   
     trigger() {
-        this.bodyEl.style.background = generateRandomColor()
-        this.amountClics.innerText = `Количество кликов: ${clickCount}`
-        this.bodyEl.append(this.amountClics)
-        this.body.addEventListener("click", counter)
-        
-        function counter(){
-            if (isCounting) {
-                clickCount++;
-                amountClics.innerText = `Количество кликов: ${clickCount}`;
-      }
-    }
+        let amountClics = document.createElement("p")
+        let clickCount = 0
+        amountClics.innerText = `Количество кликов: ${clickCount}`
+        this.bodyEl.append(amountClics)
+        this.body.addEventListener("click", () => {
+            clickCount++;
+            amountClics.innerText = `Количество кликов: ${clickCount}`;
+        })
         setTimeout(() => {
-            this.isCounting = false;
-            alert(`Время вышло! Вы кликали со скоростью ' ${(this.clickCount/10)} кликов в секунду.`);
-            this.amountClics.remove()
-    }, 10000);
+            alert(`Время вышло! Вы кликнули ${(this.clickCount)} раз.`);
+            amountClics.remove()
+    }, 3000);
     }
 }
