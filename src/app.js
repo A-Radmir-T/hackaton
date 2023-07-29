@@ -1,7 +1,7 @@
 import './styles.css'
 import {ContextMenu} from "@/menu";
 import {BackgroundModule} from "@/modules/background.module";
-
+import { CustomMessage } from './modules/customMessage.module';
 
 const modules = [BackgroundModule, clickCounterModule, CustomMessage]
 
