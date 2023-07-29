@@ -7,8 +7,8 @@ export class CustomMessage extends Module {
     static dataType = 'customMessageModule'
 
     constructor(){
-        super(CustomMessage.dataType, 'Поменять цвет');
-        this.bodyEl = document.querySelector('body');
+        super(CustomMessage.dataType, 'Создать сообщение')
+        this.bodyEl = document.querySelector('body')
     }
 
     trigger(){
