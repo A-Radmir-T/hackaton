@@ -32,11 +32,17 @@ export class ContextMenu extends Menu {
   }
 
   open(event) {
-    const {y: top, x: left} = event
+    this.el.classList.add('open')
+    const {width, height} = this.el.getBoundingClientRect()
+    const windowWidth = window.innerWidth
+    const windowHeight= window.innerHeight
+    let {y: top, x: left} = event
+
+    top = top + height >= windowHeight ? top - height : top
+    left = left + width >= windowWidth ? left - width : left
+
     this.el.style.top = top + 'px'
     this.el.style.left = left + 'px'
-
-    this.el.classList.add('open')
   }
 
   add() {
