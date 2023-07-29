@@ -5,9 +5,12 @@ export class CurrentLocation extends Module {
     constructor() {
       super(CurrentLocation.dataType, 'Показать мою геолокацию')
       this.bodyEl = document.querySelector('body')
+      this.isActive = false
     }
   
     trigger() {
+        if (!this.isActive) {
+        this.isActive = true
         const mapDiv = document.createElement('div')
         mapDiv.id = 'googleMap'
         mapDiv.style.height = '90%';
@@ -16,7 +19,6 @@ export class CurrentLocation extends Module {
         mapDiv.style.marginTop = '60px'
         this.bodyEl.append(mapDiv)
         let map = null;
-    //   document.getElementById('getLocation').addEventListener('click', function() {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             let pos = {
@@ -37,7 +39,6 @@ export class CurrentLocation extends Module {
             handleLocationError(true, infoWindow, map.getCenter());
           });
         } else {
-          // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
 
           function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -50,6 +51,8 @@ export class CurrentLocation extends Module {
         }
         setTimeout(() => {
             mapDiv.remove()
+            this.isActive = false
     }, 10000);
+        }
       }
     }
