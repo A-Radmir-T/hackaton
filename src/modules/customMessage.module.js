@@ -24,7 +24,7 @@ export class CustomMessage extends Module {
     messageText.textContent = `${randomMess}`;
 
     setTimeout(() => {
-        randomMessageBlock.style.display = 'none';
+        randomMessageBlock.remove();
     }, 4000)
     }
 
