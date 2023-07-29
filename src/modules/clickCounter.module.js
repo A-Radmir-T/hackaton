@@ -3,7 +3,7 @@ import {Module} from '../core/module'
 export class ClickCounter extends Module {
     static dataType = 'ClickCounterModule'
     constructor() {
-      super(ClickCounterModule.dataType, 'Посчитать скорость кликов')
+      super(ClickCounter.dataType, 'Посчитать скорость кликов')
       this.bodyEl = document.querySelector('body')
     }
   
@@ -17,7 +17,7 @@ export class ClickCounter extends Module {
             amountClics.innerText = `Количество кликов: ${clickCount}`;
         })
         setTimeout(() => {
-            alert(`Время вышло! Вы кликнули ${(this.clickCount)} раз.`);
+            alert(`Время вышло! Вы кликнули ${clickCount} раз.`);
             amountClics.remove()
     }, 3000);
     }
