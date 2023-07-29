@@ -9,3 +9,4 @@ const modules = [BackgroundModule, ClickCounter, CustomMessage]
 const contextMenu = new ContextMenu('#menu', modules)
 
 contextMenu.init()
+
