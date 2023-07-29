@@ -13,8 +13,8 @@ export class ShapeModule extends Module {
 
     trigger(){
 
-        const width = random(20, 80);
-        const heigth = random(30, 60);
+        const width = random(20, 800);
+        const heigth = random(30, 600);
         const color = generateRandomColor();
 
         const randomShape = document.createElement('div');
@@ -22,8 +22,10 @@ export class ShapeModule extends Module {
         randomShape.className = 'random-shape';
         randomShape.style.width = `${width}px`;
         randomShape.style.heigth = `${heigth}px`;
-        randomShape.style.color = `${color}`;
-
+        randomShape.style.backgroundColor = `${color}`;
+        setTimeout(() => {
+            randomShape.remove();
+        }, 2000)
 
 
     }
