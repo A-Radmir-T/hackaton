@@ -5,12 +5,9 @@ export class CurrentLocation extends Module {
     constructor() {
       super(CurrentLocation.dataType, 'Показать мою геолокацию')
       this.bodyEl = document.querySelector('body')
-      this.isActive = false
     }
   
     trigger() {
-        if (!this.isActive) {
-        this.isActive = true
         const mapDiv = document.createElement('div')
         mapDiv.id = 'googleMap'
         mapDiv.style.height = '90%';
@@ -51,8 +48,6 @@ export class CurrentLocation extends Module {
         }
         setTimeout(() => {
             mapDiv.remove()
-            this.isActive = false
     }, 10000);
         }
       }
-    }
