@@ -53,6 +53,7 @@ body {
     border-radius: 60px;
 }
 
+
 #counter {
     position: fixed;
     top: 50%;
@@ -65,3 +66,9 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
   
+.random-shape{
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.5s;
+}
