@@ -20,8 +20,8 @@ export class ShapeModule extends Module {
         const randomShape = document.createElement('div');
         this.bodyEl.append(randomShape);
         randomShape.className = 'random-shape';
-        randomShape.style.width = `${width}vw`;
-        randomShape.style.heigth = `${heigth}vh`;
+        randomShape.style.width = `${width}px`;
+        randomShape.style.heigth = `${heigth}px`;
         randomShape.style.color = `${color}`;
 
 
