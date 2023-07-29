@@ -1,5 +1,5 @@
-import {Module} from '../core/module';
-import {random} from '../utils';
+import {Module} from '@/core/module';
+import {random} from '@/utils';
 
 
 export class CustomMessage extends Module {
@@ -7,8 +7,8 @@ export class CustomMessage extends Module {
     static dataType = 'customMessageModule'
 
     constructor(){
-        super(CustomMessage.dataType, 'Создать сообщение')
-        this.bodyEl = document.querySelector('body')
+        super(CustomMessage.dataType, 'Создать сообщение');
+        this.bodyEl = document.querySelector('body');
     }
 
     trigger(){
